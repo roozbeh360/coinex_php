@@ -1,0 +1,11 @@
+{
+    "name": "rb/coinex_php",
+    "description": "coinex api in php",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Rb\\CoinexPhp\\": "api/"
+        }
+    },
+    "require": {}
+}
