@@ -1,6 +1,5 @@
 {
-    "name": "rb/coinex_php",
-    "description": "coinex api in php",
+    "name": "roozbeh/coinex_php",
     "type": "library",
     "autoload": {
         "psr-4": {
