@@ -13,8 +13,6 @@ class Contract
      * https://github.com/coinexcom/coinex_exchange_api/wiki/091balance_transfer
      */
     /**
-     * @param string $accessId
-     * @param int $tonce
      * @param string $transfer_side
      * @param string $coinType
      * @param string $amount
