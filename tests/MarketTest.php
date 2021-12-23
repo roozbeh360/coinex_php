@@ -8,8 +8,8 @@ final class MarketTest extends TestCase
     /**
      * @todo get access id and key from https://www.coinex.com/apikey
      */
-    private $ac = '<access id>';
-    private $sk = '<secret key>';
+    private $ac = '<access key>';
+    private $sk = '<security key>';
 
     public function testAcquireMarketList(): void
     {
@@ -36,7 +36,7 @@ final class MarketTest extends TestCase
     {
         $market = new  Market($this->ac,$this->sk);
 
-        $this->assertGreaterThan(0,count($market->acquireMarketDepth('BCHBTC','0.001',5) ));
+        $this->assertGreaterThan(0,count($market->acquireMarketDepth('BCHBTC','0.0',5) ));
     }
 
 }

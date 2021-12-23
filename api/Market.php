@@ -49,7 +49,7 @@ class Market
      */
     public function acquireMarketDepth(string $market,string $merge,int $limit){
         $this->connection->url = '/market/depth';
-        $this->connection->params = ['market'=>market,'merge'=>$merge,'limit'=>$limit];
+        $this->connection->params = ['market'=>$market,'merge'=>$merge,'limit'=>$limit];
         return $this->prepareResult($this->connection->send());
     }
 

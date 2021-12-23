@@ -23,7 +23,6 @@
         }
     },
     "require": {
-        "nabikaz/coinex-api-php": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
