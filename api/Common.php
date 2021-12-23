@@ -3,7 +3,6 @@
 
 namespace Roozbeh\CoinexPhp;
 
-use phpDocumentor\Reflection\Types\Integer;
 
 class Common
 {
