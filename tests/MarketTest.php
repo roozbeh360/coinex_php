@@ -31,4 +31,12 @@ final class MarketTest extends TestCase
 
         $this->assertGreaterThan(0,count($market->acquireAllMarketData()));
     }
+
+    public function testAcquireMarketDepth(): void
+    {
+        $market = new  Market($this->ac,$this->sk);
+
+        $this->assertGreaterThan(0,count($market->acquireMarketDepth('BCHBTC','0.001',5) ));
+    }
+
 }
