@@ -1,5 +1,21 @@
 {
     "name": "roozbeh/coinex_php",
+    "description": "Coinex digital coin exchange API for PHP",
+    "keywords": [
+        "coinex",
+        "exchange",
+        "api",
+        "php",
+        "crypto",
+        "coin"
+    ],
+    "homepage": "https://github.com/roozbeh360/coinex_php",
+    "authors": [
+        {
+            "name": "Roozbeh Baabakaan",
+            "email": "roozbeh360@gmail.com"
+        }
+    ],
     "type": "library",
     "autoload": {
         "psr-4": {
@@ -7,7 +23,6 @@
         }
     },
     "require": {
-        "php": "^7.1",
         "nabikaz/coinex-api-php": "dev-main"
     },
     "require-dev": {
