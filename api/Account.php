@@ -129,6 +129,15 @@ class Account
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/065get_deposit_list
      */
+    /**
+     * @param string $accessId
+     * @param int $tonce
+     * @param string|null $coinType
+     * @param string|null $status
+     * @param int|null $page
+     * @param int|null $limit
+     * @return mixed
+     */
     public function inquireDepositList(string $accessId ,int $tonce,string $coinType = null,string $status = null,int $page = null,int $limit = null){
         $this->connection->url = '/balance/coin/deposit';
         $this->connection->params = [
@@ -144,6 +153,15 @@ class Account
 
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/066sub_account
+     */
+    /**
+     * @param string $accessId
+     * @param int $tonce
+     * @param string $coinType
+     * @param string $amount
+     * @param string|null $transferAccount
+     * @param string|null $transferSide
+     * @return mixed
      */
     public function transferBetweenMainAccountAndSubAccount(string $accessId ,int $tonce,string $coinType ,string $amount ,string $transferAccount = null ,string $transferSide = null){
         $this->connection->url = '/sub_account/transfer';
@@ -162,6 +180,15 @@ class Account
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/068margin_transfer
      */
+    /**
+     * @param string $accessId
+     * @param int $tonce
+     * @param string $coinType
+     * @param string $amount
+     * @param string $fromAccount
+     * @param string $toAccount
+     * @return mixed
+     */
     public function transferBetweenMainAccountAndMarginAccount(string $accessId ,int $tonce,string $coinType ,string $amount ,string $fromAccount ,string $toAccount ){
         $this->connection->url = '/margin/transfer';
         $this->connection->method = 'POST';
@@ -179,6 +206,14 @@ class Account
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/072get_deposit_address
      */
+    /**
+     * @param string $accessId
+     * @param int $tonce
+     * @param string $coinType
+     * @param int|null $smartContractName
+     * @param int|null $isSplit
+     * @return mixed
+     */
     public function getDepositAddress(string $accessId ,int $tonce,string $coinType,int $smartContractName = null ,int $isSplit = null ){
         $this->connection->url = '/balance/deposit/address/'.$coinType;
         $this->connection->params = [
@@ -193,6 +228,13 @@ class Account
     /*
     * https://github.com/coinexcom/coinex_exchange_api/wiki/073generate_new_deposit_address
     */
+    /**
+     * @param string $accessId
+     * @param int $tonce
+     * @param string $coinType
+     * @param int|null $smartContractName
+     * @return mixed
+     */
     public function generateDepositAddress(string $accessId ,int $tonce,string $coinType,int $smartContractName = null  ){
         $this->connection->url = '/balance/deposit/address/'.$coinType;
         $this->connection->method = 'PUT';
@@ -207,6 +249,13 @@ class Account
     /*
     * https://github.com/coinexcom/coinex_exchange_api/wiki/074sub_account_balance
     */
+    /**
+     * @param string $accessId
+     * @param int $tonce
+     * @param string|null $coinType
+     * @param int|null $subUserName
+     * @return mixed
+     */
     public function subAccountBalance(string $accessId ,int $tonce,string $coinType = null,int $subUserName = null  ){
         $this->connection->url = '/sub_account/balance';
         $this->connection->params = [
@@ -221,6 +270,15 @@ class Account
     /*
     * https://github.com/coinexcom/coinex_exchange_api/wiki/074sub_account_balance
     */
+    /**
+     * @param string $accessId
+     * @param int $tonce
+     * @param string|null $coinType
+     * @param int|null $subUserName
+     * @param int|null $page
+     * @param int|null $limit
+     * @return mixed
+     */
     public function balanceTransferHistory(string $accessId ,int $tonce,string $coinType = null,int $subUserName = null ,int $page = null , int $limit = null ){
         $this->connection->url = '/sub_account/balance';
         $this->connection->params = [
@@ -301,6 +359,16 @@ class Account
     /*
     * https://github.com/coinexcom/coinex_exchange_api/wiki/0102investment_transfer_history_list
     */
+    /**
+     * @param string $accessId
+     * @param int|null $startTime
+     * @param int|null $endTime
+     * @param string|null $opType
+     * @param string|null $asset
+     * @param int|null $page
+     * @param int|null $limit
+     * @return mixed
+     */
     public function inquireInvestmentTransferHistoryList(string $accessId,int $startTime = null ,int $endTime = null,string $opType = null,string $asset = null ,int $page = null , int $limit = null ){
         $this->connection->url = '/investment/transfer/history';
         $this->connection->params = [

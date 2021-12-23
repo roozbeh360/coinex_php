@@ -20,6 +20,10 @@ class Common
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/071asset_config
      */
+    /**
+     * @param string|null $coinType
+     * @return mixed
+     */
     public function AcquireAssetConfig(string $coinType = null){
         $this->connection->url = '/common/asset/config';
         $this->connection->params = ['coin_type'=>$coinType];

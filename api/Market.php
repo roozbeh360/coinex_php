@@ -21,6 +21,10 @@ class Market
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/021ticker
      */
+    /**
+     * @param string $market
+     * @return mixed
+     */
     public function acquireMarketStatistics(string $market){
         $this->connection->url = '/market/ticker';
         $this->connection->params = ['market' => $market];
@@ -38,6 +42,12 @@ class Market
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/022depth
      */
+    /**
+     * @param string $market
+     * @param string $merge
+     * @param int $limit
+     * @return mixed
+     */
     public function acquireMarketDepth(string $market,string $merge,int $limit){
         $this->connection->url = '/market/depth';
         $this->connection->params = ['market'=>market,'merge'=>$merge,'limit'=>$limit];
@@ -47,6 +57,12 @@ class Market
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/023deals
      */
+    /**
+     * @param string $market
+     * @param int $lastId
+     * @param int $limit
+     * @return mixed
+     */
     public function acquireLatestTransactionData(string $market,int $lastId,int $limit){
         $this->connection->url = '/market/deals';
         $this->connection->params = ['market'=>market,'last_id'=>$lastId,'limit'=>$limit];
@@ -55,6 +71,12 @@ class Market
 
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/024kline
+     */
+    /**
+     * @param string $market
+     * @param string $type
+     * @param int $limit
+     * @return mixed
      */
     public function acquireKlineData(string $market,string $type,int $limit){
         $this->connection->url = '/market/kline';
@@ -72,6 +94,10 @@ class Market
 
     /*
      * https://github.com/coinexcom/coinex_exchange_api/wiki/026market_single_info
+     */
+    /**
+     * @param string $market
+     * @return mixed
      */
     public function acquireSingleMarketInformation(string $market){
         $this->connection->url = '/market/detail';
