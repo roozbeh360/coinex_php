@@ -4,57 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa79a9595f7b7f7dec573aa661cdd675",
-    "packages": [
-        {
-            "name": "nabikaz/coinex-api-php",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/NabiKAZ/Coinex-API-PHP.git",
-                "reference": "9b738c4627e7c715963064ab3c6686133cafe420"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/NabiKAZ/Coinex-API-PHP/zipball/9b738c4627e7c715963064ab3c6686133cafe420",
-                "reference": "9b738c4627e7c715963064ab3c6686133cafe420",
-                "shasum": ""
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "NabiKAZ\\Coinex\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Nabi KAZ",
-                    "email": "nabikaz@gmail.com",
-                    "homepage": "http://www.nabi.ir"
-                }
-            ],
-            "description": "Coinex digital coin exchange API for PHP",
-            "homepage": "https://github.com/NabiKAZ/Coinex-API-PHP",
-            "keywords": [
-                "api",
-                "coin",
-                "coinex",
-                "crypto",
-                "exchange",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/NabiKAZ/Coinex-API-PHP/issues",
-                "source": "https://github.com/NabiKAZ/Coinex-API-PHP/tree/main"
-            },
-            "time": "2021-11-11T02:41:29+00:00"
-        }
-    ],
+    "content-hash": "97cca4203a80fdbaf7f0005cc78c9bfc",
+    "packages": [],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -2152,9 +2103,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "nabikaz/coinex-api-php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

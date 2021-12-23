@@ -1,12 +1,7 @@
 <?php
 namespace Roozbeh\CoinexPhp\Initiator;
 
-/**
- * https://github.com/NabiKAZ/Coinex-API-PHP
- */
-
-use mysql_xdevapi\Exception;
-use  NabiKAZ\Coinex\CoinexAPI;
+use  Roozbeh\CoinexPhp\Initiator\CoinexAPI;
 
 trait Api {
 
